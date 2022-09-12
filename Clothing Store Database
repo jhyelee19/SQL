@@ -1,0 +1,25 @@
+--Create a clothing store database
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, color TEXT, price INTEGER);
+
+INSERT INTO inventory VALUES (1, "shirt", 5, "red", 10);
+INSERT INTO inventory VALUES (2, "pants", 7, "blue", 15);
+INSERT INTO inventory VALUES (3, "hoodie", 6, "gray", 13);
+INSERT INTO inventory VALUES (4, "shoes", 3, "white", 20);
+INSERT INTO inventory VALUES (5, "shirt", 4, "green", 10);
+INSERT INTO inventory VALUES (6, "pants", 8, "black", 15);
+INSERT INTO inventory VALUES (7, "hoodie", 5, "black", 13);
+INSERT INTO inventory VALUES (8, "shoes", 4, "black", 20);
+INSERT INTO inventory VALUES (9, "shirt", 3, "yellow", 10);
+INSERT INTO inventory VALUES (10, "pants", 5, "red", 15);
+INSERT INTO inventory VALUES (11, "hoodie", 3, "green", 13);
+INSERT INTO inventory VALUES (12, "shoes", 2, "pink", 20);
+INSERT INTO inventory VALUES (13, "shirt", 7, "pink", 10);
+INSERT INTO inventory VALUES (14, "pants", 2, "orange", 15);
+INSERT INTO inventory VALUES (15, "hoodie", 1, "red", 13);
+
+--display the database ordered by price
+SELECT * FROM inventory ORDER BY price;
+
+--what is the sum of the items' quantity?
+SELECT SUM(quantity) FROM inventory 
